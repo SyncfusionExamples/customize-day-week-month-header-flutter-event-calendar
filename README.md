@@ -1,2 +1,1 @@
-# customize-day-week-month-header-flutter-event-calendar
-How to customize the day, week, month header of Schedule view in the Flutter event calendar (SfCalendar)
+**[View document in Syncfusion Flutter Knowledge base](https://www.syncfusion.com/kb/12178/how-to-customize-the-day-week-month-header-of-schedule-view-in-the-flutter-event-calendar)**
