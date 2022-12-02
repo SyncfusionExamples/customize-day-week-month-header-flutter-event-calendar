@@ -1,33 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-void main() => runApp(ScheduleViewCustomization());
+void main() => runApp(const ScheduleViewCustomization());
 
 class ScheduleViewCustomization extends StatelessWidget {
+  const ScheduleViewCustomization({super.key});
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: SafeArea(
             child: SfCalendar(
-          view: CalendarView.schedule,
-          scheduleViewSettings: ScheduleViewSettings(
-              dayHeaderSettings: DayHeaderSettings(
-                  dateTextStyle: TextStyle(color: Colors.green, fontSize: 10),
-                  dayFormat: 'EEEE',
-                  dayTextStyle: TextStyle(color: Colors.red, fontSize: 10)),
-              weekHeaderSettings: WeekHeaderSettings(
-                  weekTextStyle: TextStyle(
-                    color: Colors.pink,
-                  ),
-                  startDateFormat: 'MMMM dd, yyyy',
-                  endDateFormat: 'MMMM dd, yyyy'),
-              monthHeaderSettings: MonthHeaderSettings(
-                  monthFormat: 'MMM  yyyy',
-                  backgroundColor: Colors.teal,
-                  monthTextStyle: TextStyle(color: Colors.black),textAlign: TextAlign.center)),
-          dataSource: _getCalendarDataSource(),
-        )),
+              view: CalendarView.schedule,
+              scheduleViewSettings: const ScheduleViewSettings(
+                  dayHeaderSettings: DayHeaderSettings(
+                      dateTextStyle: TextStyle(color: Colors.green, fontSize: 10),
+                      dayFormat: 'EEEE',
+                      dayTextStyle: TextStyle(color: Colors.red, fontSize: 10)),
+                  weekHeaderSettings: WeekHeaderSettings(
+                      weekTextStyle: TextStyle(
+                        color: Colors.pink,
+                      ),
+                      startDateFormat: 'MMMM dd, yyyy',
+                      endDateFormat: 'MMMM dd, yyyy'),
+                  monthHeaderSettings: MonthHeaderSettings(
+                      monthFormat: 'MMM  yyyy',
+                      backgroundColor: Colors.teal,
+                      monthTextStyle: TextStyle(color: Colors.black),textAlign: TextAlign.center)),
+              dataSource: _getCalendarDataSource(),
+            )),
       ),
     );
   }
